@@ -5,22 +5,33 @@
 
     <p>Click the button to get multiply every element in the array with a specific number.</p>
     <p>Multiply with: <input type="number" id="multiplyWith" value="10"></p>
-    <button onclick="numbers.forEach(myFunction)">Try it</button>
+    <button onclick="filter()">Try it</button>
 
     <p>Updated array: <span id="demo"></span></p>
 
     <script>
-        var abc = [{
-            a: "a1",
+        var xyz = [{
+            a: "a2",
             b: "b1",
             c: [{
-                a: "a2"
+                a: "a1"
             }]
         }, {
             a: "a2",
             b: "b2"
         }];
+        var mno;
+        var abc;
+        function setData(data){
+        mno=JSON.stringify(data);;
+        }
+        function getData(){
 
+        return JSON.parse(mno);
+        }
+        setData(xyz)
+function filter(){
+abc =getData();
         abc.forEach(function(a) {
 
             for (var key in a) {
@@ -66,7 +77,16 @@
             }
 
         })
-        console.log(abc)
+                        console.log(xyz)
+
+                console.log(abc)
+if(abc==xyz)
+{console.log("same")}
+                console.log(abc)
+if(abc==mno)
+{console.log("same")}
+        }
+
     </script>
 
 </body>
